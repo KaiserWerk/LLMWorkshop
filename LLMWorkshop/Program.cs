@@ -351,9 +351,9 @@ namespace LLMWorkshop
                             }
                         },
                         required = new[]
-                                {
-                                    "city"
-                                }
+                        {
+                            "city"
+                        }
                     }
                 }
             };
@@ -366,7 +366,6 @@ namespace LLMWorkshop
                 {
                     userMessage
                 },
-
                 tools = new object[]
                 {
                     toolMessage
