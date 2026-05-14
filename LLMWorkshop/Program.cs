@@ -378,8 +378,8 @@ namespace LLMWorkshop
 
             var toolCall = parsed!.Choices[0].Message.ToolCalls[0];
 
-            Console.WriteLine(toolCall.Function.Name);
-            Console.WriteLine(toolCall.Function.Arguments);
+            //Console.WriteLine(toolCall.Function.Name);
+            //Console.WriteLine(toolCall.Function.Arguments);
 
             var args = JsonSerializer.Deserialize<Dictionary<string, string>>(toolCall.Function.Arguments);
 
@@ -407,8 +407,10 @@ namespace LLMWorkshop
             };
 
             var secondResponse = await client.PostAsync(secondPayload);
+            var parsedSecond = JsonSerializer.Deserialize<ChatCompletion>(secondResponse);
+            var content = parsedSecond!.Choices[0].Message.Content;
 
-            Console.WriteLine(secondResponse);
+            Console.WriteLine(content);
         }
     }
 }
