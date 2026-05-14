@@ -397,6 +397,8 @@ namespace LLMWorkshop
             var secondPayload = new
             {
                 model = MODEL,
+                // die toolMessage gehört nicht mehr in die Liste von Nachrichten, da sie ja bereits im ersten Durchlauf übergeben wurde.
+                // Stattdessen übergeben wir jetzt die Antwort des Tools als neue Nachricht.
                 messages = new object[]
                 {
                     userMessage,
