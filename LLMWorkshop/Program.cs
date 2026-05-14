@@ -385,6 +385,7 @@ namespace LLMWorkshop
 
             var city = args!["city"];
 
+            // gibt es überhaupt eine Funktion mit dem Namen aus toolCall.Function.Name?
             var weather = Functions.GetWeather(city);
 
             var toolCallMessage = new
