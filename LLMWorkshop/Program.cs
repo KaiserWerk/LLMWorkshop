@@ -400,7 +400,6 @@ namespace LLMWorkshop
                 messages = new object[]
                 {
                     userMessage,
-                    toolMessage,
                     parsed!.Choices[0].Message,
                     toolCallMessage,
                 }
