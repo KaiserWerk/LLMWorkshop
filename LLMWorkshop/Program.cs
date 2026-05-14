@@ -330,7 +330,7 @@ namespace LLMWorkshop
             var userMessage = new
             {
                 role = "user",
-                content = "Do I need a jacket in Hamburg?"
+                content = "Do I need a jacket in Hamburg right now?"
             };
             var toolMessage = new
             {
